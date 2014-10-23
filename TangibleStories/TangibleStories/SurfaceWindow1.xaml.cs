@@ -15,6 +15,7 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
+using System.IO;
 
 namespace TangibleStories
 {
@@ -32,6 +33,9 @@ namespace TangibleStories
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
+
+            scatter.ItemsSource =
+                Directory.GetFiles(@"C:\Users\Public\Pictures\Sample Pictures", "*.jpg");
         }
 
         /// <summary>
@@ -98,6 +102,20 @@ namespace TangibleStories
         private void OnWindowUnavailable(object sender, EventArgs e)
         {
             //TODO: disable audio, animations here
+        }
+        private void OnItemClicked(object sender, RoutedEventArgs e)
+        {
+            // Get the button that was clicked & hide it.
+
+            // Get the ScatterViewItem control for the clicked button.
+
+            // Get the image within the ScatterViewItemcontrol
+
+            // Convert the image to grayscale.
+        }
+        private void SurfaceButton_Click(object sender, RoutedEventArgs e)
+        {
+       
         }
     }
 }

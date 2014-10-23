@@ -4,7 +4,17 @@
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     Title="TangibleStories"
     >
-  <Grid>
-
-  </Grid>
+    <s:SurfaceScrollViewer HorizontalScrollBarVisibility="Auto">
+        <s:ScatterView x:Name="scatter"
+                       Height="2000" Width="2000"
+                       BorderBrush="Gray" BorderThickness="3">
+            <s:ScatterView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image x:Name="img" Source="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </s:ScatterView.ItemTemplate>
+        </s:ScatterView>
+    </s:SurfaceScrollViewer>
 </s:SurfaceWindow>
