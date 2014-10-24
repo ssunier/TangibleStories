@@ -4,22 +4,21 @@
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     Title="TangibleStories"
     >
-    <s:SurfaceScrollViewer HorizontalScrollBarVisibility="Auto">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush 
+                                    Stretch="UniformToFill" ImageSource="/TangibleStories;component/Resources/map.png" />
+        </Grid.Background>
         <s:ScatterView x:Name="scatter"
-                       Height="2000" Width="2000"
-                       BorderBrush="Gray" BorderThickness="3"
-                       >
-            <s:ScatterView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.Background>
-                            <ImageBrush ImageSource="~/Content/map.png"
-                                        Stretch="UniformToFill"/>
-                        </Grid.Background>
-                        <Image x:Name="img" Source="{Binding}" />
-                    </Grid>
-                </DataTemplate>
-            </s:ScatterView.ItemTemplate>
-        </s:ScatterView>
-    </s:SurfaceScrollViewer>
+                    BorderBrush="Gray" BorderThickness="3" 
+                    >
+        <s:ScatterView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Image x:Name="img" Source="{Binding}" />
+                </Grid>
+            </DataTemplate>
+        </s:ScatterView.ItemTemplate>
+    </s:ScatterView>
+    </Grid>
 </s:SurfaceWindow>
