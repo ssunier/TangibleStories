@@ -117,5 +117,10 @@ namespace TangibleStories
         {
        
         }
+
+        private void SurfaceWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

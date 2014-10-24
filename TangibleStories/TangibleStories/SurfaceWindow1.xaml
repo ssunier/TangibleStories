@@ -2,12 +2,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
-    Title="TangibleStories"
-    >
+    Title="TangibleStories" Loaded="SurfaceWindow_Loaded">
     <Grid>
         <Grid.Background>
-            <ImageBrush 
-                                    Stretch="UniformToFill" ImageSource="/TangibleStories;component/Resources/map.png" />
+            <ImageBrush Stretch="UniformToFill" ImageSource="/TangibleStories;component/Resources/map.png" />
         </Grid.Background>
         <s:ScatterView x:Name="scatter"
                     BorderBrush="Gray" BorderThickness="3" 
