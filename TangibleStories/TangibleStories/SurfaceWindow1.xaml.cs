@@ -34,8 +34,87 @@ namespace TangibleStories
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
 
+            USButton.Click += new RoutedEventHandler(USButton_Click);
+            ItalyButton.Click += new RoutedEventHandler(ItalyButton_Click);
+            //scatter.ItemsSource =
+                //Directory.GetFiles(@"C:\Users\Public\Pictures\Sample Pictures", "*.jpg");
+        }
+        private void USButton_Click(object sender, RoutedEventArgs e)
+        {
             scatter.ItemsSource =
-                Directory.GetFiles(@"C:\Users\Public\Pictures\Sample Pictures", "*.jpg");
+                Directory.GetFiles(@"../../Resources/img/US/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void CanadaButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Canada/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        public void TCButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/TC/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        public void EcuadorButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Ecuador/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        public void PeruButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Peru/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void SwitzerlandButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Switzerland/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void AustriaButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Austria/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void FranceButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/France/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void GermanyButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Germany/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void ItalyButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Italy/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void UKButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/UK/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void NorwayButton_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource =
+                Directory.GetFiles(@"../../Resources/img/Norway/", "*.jpg");
+            ClearButton.Visibility = Visibility.Visible;
+        }
+        private void ClearAll_Click(object sender, RoutedEventArgs e)
+        {
+            scatter.ItemsSource = null;
+            ClearButton.Visibility = Visibility.Hidden;
         }
 
         /// <summary>

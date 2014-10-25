@@ -7,16 +7,74 @@
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/TangibleStories;component/Resources/map.png" />
         </Grid.Background>
-        <s:ScatterView x:Name="scatter"
-                    BorderBrush="Gray" BorderThickness="3" 
-                    >
-        <s:ScatterView.ItemTemplate>
-            <DataTemplate>
-                <Grid>
-                    <Image x:Name="img" Source="{Binding}" />
-                </Grid>
-            </DataTemplate>
-        </s:ScatterView.ItemTemplate>
-    </s:ScatterView>
+        <!-- Northern American Buttons -->
+        <s:SurfaceButton Name="CanadaButton"
+                         Background="Transparent"
+                         Margin="0,0,700,300"
+                         Click="CanadaButton_Click" Height="300" Width="300"/>
+        <s:SurfaceButton Name="USButton"
+                         Background="Transparent"
+                         Margin="0,80,700,0"
+                         Click="USButton_Click" Width="200" Height="100" />
+        <!-- South America & Caribbean -->
+        <s:SurfaceButton Name="TCButton"
+                         Background="Transparent"
+                         Margin="0,200,500,0"
+                         Click="TCButton_Click" Width="100" Height="100" />
+        <s:SurfaceButton Name="EcuadorButton"
+                         Background="Transparent"
+                         Margin="0,340,600,0"
+                         Click="EcuadorButton_Click" Width="15" Height="15" />
+        <s:SurfaceButton Name="PeruButton"
+                         Background="Transparent"
+                         Margin="0,420,580,0"
+                         Click="PeruButton_Click" Width="20" Height="50"/>
+        <!-- Europe -->
+        <s:SurfaceButton Name="AustriaButton"
+                         Background="Transparent"
+                         Margin="0,0,0,0"
+                         Click="AustriaButton_Click" Width="5" Height="5"/>
+        <s:SurfaceButton Name="SwitzerlandButton"
+                         Background="Transparent"
+                         Margin="0,0,20,0"
+                         Click="SwitzerlandButton_Click" Width="5" Height="5"/>
+        <s:SurfaceButton Name="FranceButton"
+                         Background="Transparent"
+                         Margin="0,0,75,0"
+                         Click="FranceButton_Click" Width="30" Height="40"/>
+        <s:SurfaceButton Name="ItalyButton"
+                         Background="Transparent"
+                         Margin="10,53,0,0"
+                         Click="ItalyButton_Click"
+                         Width="10" Height="45" />
+        <s:SurfaceButton Name="GermanyButton"
+                         Background="Transparent"
+                         Margin="0,0,20,50"
+                         Click="GermanyButton_Click" Width="20" Height="40" /> 
+        <s:SurfaceButton Name="UKButton"
+                         Background="Transparent"
+                         Margin="0,0,100,70"
+                         Click="UKButton_Click" Width="20" Height="50" />
+        <s:SurfaceButton Name="NorwayButton"
+                         Background="Transparent"
+                         Margin="0,0,0,230"
+                         Click="NorwayButton_Click" Width="50" Height="120"/>
+        
+        <s:SurfaceButton Name="ClearButton"
+                         Visibility="Hidden"
+                         Content="Clear"
+                         Margin="1200,600,0,0"
+                         Click="ClearAll_Click" Width="100" Height="50" />
+
+        <s:ScatterView x:Name="scatter" Margin="2,32,-2,-32">
+            <s:ScatterView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image x:Name="img" Source="{Binding}" />
+                        
+                    </Grid>
+                </DataTemplate>
+            </s:ScatterView.ItemTemplate>
+        </s:ScatterView>
     </Grid>
 </s:SurfaceWindow>
