@@ -34,87 +34,174 @@ namespace TangibleStories
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
 
-            USButton.Click += new RoutedEventHandler(USButton_Click);
-            ItalyButton.Click += new RoutedEventHandler(ItalyButton_Click);
-            //scatter.ItemsSource =
-                //Directory.GetFiles(@"C:\Users\Public\Pictures\Sample Pictures", "*.jpg");
         }
         private void USButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/US/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "The United States of America (September 1992-?)" +
+                Environment.NewLine + "I was born in New York in 1992 and have spent the majority of my life living in 4 states and exploring 26 more!";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void CanadaButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Canada/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Canada (February 2011)" +
+                Environment.NewLine + "My family and I went to Canada to go Cat Skiing in British Columbia." +
+                "This was some of the most incredible skiing I have ever been lucky enough to enjoy";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         public void TCButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/TC/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Turks & Caicos (March 2014)" +
+                Environment.NewLine + "My mother and I went to Turks and Caicos for my Spring Break." +
+                "I got scuba certified and completed my Wellesley PE Requirement.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         public void EcuadorButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Ecuador/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Ecuador (August 2011)" +
+                Environment.NewLine + "My family and I traveled to Ecuador's Galapagos Islands for a cruise and an incredible wildlife safari.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         public void PeruButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Peru/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Peru (August 2011)" +
+                Environment.NewLine + "My family and I traveled to Peru.  We explored anciant Incan ruins and the Spanish Colonial cities, " +
+                "doing lots of hiking along the way!";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void SwitzerlandButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Switzerland/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Switzerland (1994, 1998, 2006, August 2013)" +
+                Environment.NewLine + "My family is Swiss, and so I have been lucky enough to visit this beautiful mountain country several times in my life. " +
+                "These are photos from my most recent trip in the summer of '13.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void AustriaButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Austria/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Austria (July 2004)" +
+                Environment.NewLine + "My family and I stayed in Innsbruck for 2 days while en route from Munich to Italy.  The schnitzel was devine.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void FranceButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/France/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "France (July 2011, August 2013)" +
+                Environment.NewLine + "One of my best friends lives in Normandy and I have been lucky enough to visit her country and explore both the north and the south with her.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void GermanyButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Germany/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Germany (July 2004)" +
+                Environment.NewLine + "My family and I spent two days in Munich exploring the city my mother lived in for 3 years during the beginning of her career at the Pentagon.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void ItalyButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Italy/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Italy (July 2004)" +
+                Environment.NewLine + "My family and I traveled to Europe in 2004 to attend my Zio Urbano's 80th birthday party.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void UKButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/UK/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "United Kingdon (August 2014)" +
+                Environment.NewLine + "I traveled to the UK to begin my EuroTrip in the summer of 2014.  I loved walking around London and Edinbourogh with my camera.";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
         private void NorwayButton_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource =
                 Directory.GetFiles(@"../../Resources/img/Norway/", "*.jpg");
             ClearButton.Visibility = Visibility.Visible;
+            TripInfo.Content = "Norway (July 2009)" +
+                Environment.NewLine + "My parents and I traveled to Norway in 2009 to explore the land of the Fjiords and Trolls!";
+            if (showInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
         }
+
         private void ClearAll_Click(object sender, RoutedEventArgs e)
         {
             scatter.ItemsSource = null;
             ClearButton.Visibility = Visibility.Hidden;
+            TripInfo.Visibility = Visibility.Hidden;
+        }
+
+        private void TripInfo_Checked(object sender, RoutedEventArgs e)
+        {
+            if (showInfo.IsChecked == true && TripInfo != null)
+            {
+                TripInfo.Visibility = Visibility.Visible;
+            }
+            if (hideInfo.IsChecked == true)
+            {
+                TripInfo.Visibility = Visibility.Hidden;
+            }
+
         }
 
         /// <summary>
@@ -201,5 +288,21 @@ namespace TangibleStories
         {
 
         }
+
+        private void TagVisualizer_VisualizationAdded(object sender, TagVisualizerEventArgs e)
+        {
+            string s = e.TagVisualization.VisualizedTag.Value.ToString();
+
+            if (s.Equals("1"))
+            {
+                
+            }
+        }
+
+        private void TagVisualizer_VisualizationRemoved(object sender, TagVisualizerEventArgs e)
+        {
+
+        }
+
     }
 }

@@ -7,6 +7,14 @@
         <Grid.Background>
             <ImageBrush Stretch="UniformToFill" ImageSource="/TangibleStories;component/Resources/map.png" />
         </Grid.Background>
+
+        <s:TagVisualizer VisualizationAdded="TagVisualizer_VisualizationAdded" VisualizationRemoved="TagVisualizer_VisualizationRemoved">
+            <s:TagVisualizer.Definitions>
+                <s:TagVisualizationDefinition Value="0x1"/>
+                <s:TagVisualizationDefinition Value="0x2"/>
+            </s:TagVisualizer.Definitions>
+        </s:TagVisualizer>
+
         <!-- Northern American Buttons -->
         <s:SurfaceButton Name="CanadaButton"
                          Background="Transparent"
@@ -29,7 +37,7 @@
                          Background="Transparent"
                          Margin="0,420,580,0"
                          Click="PeruButton_Click" Width="20" Height="50"/>
-        <!-- Europe -->
+        <!-- Europe Buttons -->
         <s:SurfaceButton Name="AustriaButton"
                          Background="Transparent"
                          Margin="0,0,0,0"
@@ -59,13 +67,23 @@
                          Background="Transparent"
                          Margin="0,0,0,230"
                          Click="NorwayButton_Click" Width="50" Height="120"/>
-        
+        <StackPanel Margin="40">
+            <s:SurfaceRadioButton x:Name="hideInfo" Content="Hide Trip Info" GroupName="Info"
+                                  Checked="TripInfo_Checked" IsChecked="False"/>
+            <s:SurfaceRadioButton x:Name="showInfo" Content="Show Trip Info" GroupName="Info"
+                                  Checked="TripInfo_Checked" IsChecked="True"/>
+        </StackPanel>
         <s:SurfaceButton Name="ClearButton"
                          Visibility="Hidden"
                          Content="Clear"
                          Margin="1200,600,0,0"
                          Click="ClearAll_Click" Width="100" Height="50" />
-
+        <Label Name="TripInfo"
+               Margin="0,500,1100,0"
+               Width="250" Height="500" />
+        
+        
+        
         <s:ScatterView x:Name="scatter" Margin="2,32,-2,-32">
             <s:ScatterView.ItemTemplate>
                 <DataTemplate>
@@ -76,5 +94,6 @@
                 </DataTemplate>
             </s:ScatterView.ItemTemplate>
         </s:ScatterView>
+        <!--</s:TagVisualizer>-->
     </Grid>
 </s:SurfaceWindow>
