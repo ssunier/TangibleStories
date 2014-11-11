@@ -1,0 +1,100 @@
+﻿<s:SurfaceWindow x:Class="TangibleStories.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    Title="TangibleStories" Loaded="SurfaceWindow_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/TangibleStories;component/Resources/map.png" />
+        </Grid.Background>
+
+        <s:TagVisualizer VisualizationAdded="TagVisualizer_VisualizationAdded" VisualizationRemoved="TagVisualizer_VisualizationRemoved">
+            <s:TagVisualizer.Definitions>
+                <s:TagVisualizationDefinition Value="0x1"/>
+                <s:TagVisualizationDefinition Value="0x2"/>
+            </s:TagVisualizer.Definitions>
+        </s:TagVisualizer>
+
+        <!-- Northern American Buttons -->
+        <s:SurfaceButton Name="CanadaButton"
+                         Background="Transparent"
+                         Margin="0,0,700,300"
+                         Click="CanadaButton_Click" Height="300" Width="300"/>
+        <s:SurfaceButton Name="USButton"
+                         Background="Transparent"
+                         Margin="0,80,700,0"
+                         Click="USButton_Click" Width="200" Height="100" />
+        <!-- South America & Caribbean -->
+        <s:SurfaceButton Name="TCButton"
+                         Background="Transparent"
+                         Margin="0,200,500,0"
+                         Click="TCButton_Click" Width="100" Height="100" />
+        <s:SurfaceButton Name="EcuadorButton"
+                         Background="Transparent"
+                         Margin="0,340,600,0"
+                         Click="EcuadorButton_Click" Width="15" Height="15" />
+        <s:SurfaceButton Name="PeruButton"
+                         Background="Transparent"
+                         Margin="0,420,580,0"
+                         Click="PeruButton_Click" Width="20" Height="50"/>
+        <!-- Europe Buttons -->
+        <s:SurfaceButton Name="AustriaButton"
+                         Background="Transparent"
+                         Margin="0,0,0,0"
+                         Click="AustriaButton_Click" Width="5" Height="5"/>
+        <s:SurfaceButton Name="SwitzerlandButton"
+                         Background="Transparent"
+                         Margin="0,0,20,0"
+                         Click="SwitzerlandButton_Click" Width="5" Height="5"/>
+        <s:SurfaceButton Name="FranceButton"
+                         Background="Transparent"
+                         Margin="0,0,75,0"
+                         Click="FranceButton_Click" Width="30" Height="40"/>
+        <s:SurfaceButton Name="ItalyButton"
+                         Background="Transparent"
+                         Margin="10,53,0,0"
+                         Click="ItalyButton_Click"
+                         Width="10" Height="45" />
+        <s:SurfaceButton Name="GermanyButton"
+                         Background="Transparent"
+                         Margin="0,0,20,50"
+                         Click="GermanyButton_Click" Width="20" Height="40" /> 
+        <s:SurfaceButton Name="UKButton"
+                         Background="Transparent"
+                         Margin="0,0,100,70"
+                         Click="UKButton_Click" Width="20" Height="50" />
+        <s:SurfaceButton Name="NorwayButton"
+                         Background="Transparent"
+                         Margin="0,0,0,230"
+                         Click="NorwayButton_Click" Width="50" Height="120"/>
+        <StackPanel Margin="40">
+            <s:SurfaceRadioButton x:Name="hideInfo" Content="Hide Trip Info" GroupName="Info"
+                                  Checked="TripInfo_Checked" IsChecked="False"/>
+            <s:SurfaceRadioButton x:Name="showInfo" Content="Show Trip Info" GroupName="Info"
+                                  Checked="TripInfo_Checked" IsChecked="True"/>
+        </StackPanel>
+        <s:SurfaceButton Name="ClearButton"
+                         Visibility="Hidden"
+                         Content="Clear"
+                         Margin="1200,600,0,0"
+                         Click="ClearAll_Click" Width="100" Height="50" />
+        <Label Name="TripInfo"
+               Margin="0,500,1100,0"
+               Width="250" Height="500" />
+        <Label Name="Description"
+               Visibility="Hidden"
+               Margin="0,450,1100,0"
+               Height="225" Width="250"
+               Background="LightGray"
+               />
+        <s:ScatterView x:Name="scatter" Margin="2,32,-2,-32">
+            <s:ScatterView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image x:Name="img" Source="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </s:ScatterView.ItemTemplate>
+        </s:ScatterView>
+    </Grid>
+</s:SurfaceWindow>
